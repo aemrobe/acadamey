@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*custom variables*/
+:root {
+  --font-ff-red-hat-regular: "RedHatDisplay-Regular";
+  --font-ff-red-hat-bold: "RedHatDisplay-bold";
+  --font-ff-red-hat-light: "RedHatDisplay-light";
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(79, 72%, 55%);
+  --first-color-light: hsl(79, 97%, 77%);
+  --first-color-alt: hsl(79, 67%, 52%);
+  --first-color-dark: hsl(79, 63%, 50%);
+  --first-color-gray: #a5a99e;
+  --title-color: #fafafa;
+  --title-color-black: hsl(180, 4%, 12%);
+  --text-color: #b5baba;
+  --text-color-light: #a2a9a9;
+  --body-color: hsl(180, 12%, 8%);
+  --label-text-color: #797979;
+  --input-border-color: #e3e3e3;
+  --light-green: #37ce8a;
+  --orange: orange;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: var(--font-ff-red-hat-light);
+}
+
+.section-title {
+  font-family: var(--font-ff-red-hat-regular);
+  border-bottom: 1px solid var(--input-border-color);
+  padding: 1rem 1.5rem;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+.performance__football,
+.performance__athletics,
+.performance__gym {
+  padding: 1.2rem 1.5rem 1.2rem 3rem;
+  text-transform: capitalize;
+}
+
+.list-of-members-of-the-club {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  list-style-type: none;
+  border-radius: 15px;
+  padding: 4rem 2rem;
+  background-color: var(--title-color);
+  width: 90%;
+  max-width: 35rem;
+  margin: 0 auto;
+  color: var(--title-color-black);
+}
+
+.crud-buttons {
+  position: absolute;
+  padding: 1rem 2rem;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-100%);
+  transition: transform 0.8s ease;
+}
+
+.card:hover .crud-buttons {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card {
+  margin-top: 2rem;
+}
+
+.card-img {
+  display: block;
+  margin: 0 auto 2rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card .row + .row {
+  margin-top: 1.5rem;
+}
+
+.card .row > * {
+  margin-top: 3px;
+}
+
+.card__value {
+  text-decoration: underline;
+  text-decoration-color: var(--title-color-black);
+}
+
+.peformance__subtitle {
+  margin-bottom: 1rem;
+}
+
+.coaches-page__form {
+  padding: 1rem 0 0 4rem;
+}
+
+/*form control*/
+.form-control {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control__label {
+  color: var(--label-text-color);
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 0.8rem;
+}
+
+input,
+select {
+  padding: 1rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: var(--light-green);
+  border: none;
+  color: white;
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.margin-top-2 {
+  margin-top: 2rem;
+}
+
+.font-size-2 {
+  font-size: 2rem;
+}
+
+/*media query*/
+@media (min-width: 700px) {
+  /*coaches*/
+  .card {
+    margin: 1.5rem 2rem;
+  }
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gym - coaches</title>
+    <!--css-->
+    <link rel="stylesheet" href="coaches.css" />
+    <!--font-awesome-icon-->
+    <script src="./font-awesome-icon/all.js"></script>
+  </head>
+  <body>
+    <h2 class="section-title">members performance page</h2>
+
+    <!--performance measure for gym club-->
+    <div class="performance__gym margin-top-2">
+      <h3 class="peformance__subtitle">gym members performance</h3>
+
+      <form action="#" class="coaches-page__form">
+        <div class="form-control">
+          <!--username-->
+          <label for="username" class="form-control__label"> username</label>
+
+          <input
+            type="number"
+            id="username"
+            name="username"
+            placeholder="Add an username"
+          />
+        </div>
+
+        <div class="form-control display-flex">
+          <label class="form-control__label" for="club">Club</label>
+
+          <select name="club" class="style-for-input" id="club">
+            <option value="choose-club">choose club</option>
+
+            <option value="athletics">athletics</option>
+
+            <option value="athletics">football</option>
+
+            <option value="athletics">gym</option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <!--strength-->
+          <label for="strength" class="form-control__label"> strength</label>
+
+          <input
+            type="number"
+            id="strength"
+            name="strength"
+            placeholder="Add a strength"
+          />
+        </div>
+
+        <div class="form-control">
+          <!--flexibility-->
+          <label for="flexibility" class="form-control__label"
+            >flexibility</label
+          >
+
+          <input
+            type="number"
+            id="flexibility"
+            name="flexibility"
+            placeholder="Add a flexibility"
+          />
+        </div>
+
+        <div class="form-control">
+          <!--power-->
+          <label class="form-control__label" for="power">power</label>
+
+          <input
+            type="number"
+            name="power"
+            id="power"
+            placeholder="Add a power"
+          />
+        </div>
+
+        <div class="form-control">
+          <!--endurance-->
+          <label class="form-control__label" for="endurance">endurance</label>
+
+          <input
+            type="number"
+            name="endurance"
+            id="endurance"
+            placeholder="Add an endurance"
+          />
+        </div>
+
+        <div class="form-control">
+          <!--body composition-->
+          <label class="form-control__label" for="body-composition"
+            >body composition</label
+          >
+
+          <input
+            type="number"
+            name="body composition"
+            id="body-composition"
+            placeholder="Add a body composition"
+          />
+        </div>
+
+        <div class="form-control">
+          <!--recovery rate-->
+          <label class="form-control__label" for="recovery-rate"
+            >recovery rate</label
+          >
+
+          <input
+            type="number"
+            name="recovery rate"
+            id="recovery-rate"
+            placeholder="Add a recovery rate"
+          />
+        </div>
+
+        <button type="submit">save and post</button>
+      </form>
+
+      <h4 class="peformance__subtitle margin-top-2 font-size-2">
+        peformance of the members
+      </h4>
+
+      <!--list of performance of members of the football club-->
+      <ul class="list-of-members-of-the-club">
+        <!--card-1-->
+        <li class="card">
+          <!--crud buttons-->
+          <div class="crud-buttons">
+            <span class="edit-text">
+              <i class="fas fa-pencil-alt"></i>
+            </span>
+
+            <span class="delete-text">
+              <i class="fas fa-trash"></i>
+            </span>
+          </div>
+
+          <!--card image-->
+          <img
+            style="width: 100px; height: 100px'"
+            src="./image/wollo logo.jpg"
+            alt="image of the coach"
+            class="card-img"
+          />
+
+          <!--row 1-->
+          <div class="row">
+            <p class="card__key">username:</p>
+            <p class="card__value">Gethun negash</p>
+          </div>
+
+          <!--row 2-->
+          <div class="row">
+            <p class="card__key">club:</p>
+
+            <p class="card__value">football</p>
+          </div>
+
+          <!--row 3-->
+          <div class="row">
+            <p class="card__key">flexibility:</p>
+
+            <p class="card__value">80</p>
+          </div>
+
+          <!--row 4-->
+          <div class="row">
+            <p class="card__key">power:</p>
+
+            <p class="card__value">50</p>
+          </div>
+
+          <!--row 5-->
+          <div class="row">
+            <p class="card__key">endurance:</p>
+
+            <p class="card__value">60</p>
+          </div>
+
+          <!--row 6-->
+          <div class="row">
+            <p class="card__key">body composition:</p>
+
+            <p class="card__value">40</p>
+          </div>
+
+          <!--row 7-->
+          <div class="row">
+            <p class="card__key">accuracy:</p>
+
+            <p class="card__value">30</p>
+          </div>
+
+          <!--row 8-->
+          <div class="row">
+            <p class="card__key">recovery rate:</p>
+
+            <p class="card__value">30</p>
+          </div>
+        </li>
+
+        <!--card-1-->
+        <li class="card">
+          <!--crud buttons-->
+          <div class="crud-buttons">
+            <span class="edit-text">
+              <i class="fas fa-pencil-alt"></i>
+            </span>
+
+            <span class="delete-text">
+              <i class="fas fa-trash"></i>
+            </span>
+          </div>
+
+          <!--card image-->
+          <img
+            style="width: 100px; height: 100px'"
+            src="./image/wollo logo.jpg"
+            alt="image of the coach"
+            class="card-img"
+          />
+
+          <!--row 1-->
+          <div class="row">
+            <p class="card__key">username:</p>
+            <p class="card__value">Gethun negash</p>
+          </div>
+
+          <!--row 2-->
+          <div class="row">
+            <p class="card__key">club:</p>
+
+            <p class="card__value">football</p>
+          </div>
+
+          <!--row 3-->
+          <div class="row">
+            <p class="card__key">flexibility:</p>
+
+            <p class="card__value">80</p>
+          </div>
+
+          <!--row 4-->
+          <div class="row">
+            <p class="card__key">power:</p>
+
+            <p class="card__value">50</p>
+          </div>
+
+          <!--row 5-->
+          <div class="row">
+            <p class="card__key">endurance:</p>
+
+            <p class="card__value">60</p>
+          </div>
+
+          <!--row 6-->
+          <div class="row">
+            <p class="card__key">body composition:</p>
+
+            <p class="card__value">40</p>
+          </div>
+
+          <!--row 7-->
+          <div class="row">
+            <p class="card__key">accuracy:</p>
+
+            <p class="card__value">30</p>
+          </div>
+
+          <!--row 8-->
+          <div class="row">
+            <p class="card__key">recovery rate:</p>
+
+            <p class="card__value">30</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

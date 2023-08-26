@@ -1,0 +1,490 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "RedHatDisplay-light";
+  src: url(./font-family/RedHatDisplay-Light.ttf);
+}
+
+@font-face {
+  font-family: "RedHatDisplay-Regular";
+  src: url(./font-family/RedHatDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: "RedHatDisplay-bold";
+  src: url(./font-family/RedHatDisplay-Bold.ttf);
+}
+
+/*custom variables*/
+:root {
+  --font-ff-red-hat-regular: "RedHatDisplay-Regular";
+  --font-ff-red-hat-bold: "RedHatDisplay-bold";
+  --font-ff-red-hat-light: "RedHatDisplay-light";
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(79, 72%, 55%);
+  --first-color-light: hsl(79, 97%, 77%);
+  --first-color-alt: hsl(79, 67%, 52%);
+  --first-color-dark: hsl(79, 63%, 50%);
+  --first-color-gray: #a5a99e;
+  --title-color: #fafafa;
+  --title-color-black: hsl(180, 4%, 12%);
+  --text-color: #b5baba;
+  --text-color-light: #a2a9a9;
+  --body-color: hsl(180, 12%, 8%);
+  --label-text-color: #797979;
+  --input-border-color: #e3e3e3;
+  --light-green: #37ce8a;
+  --orange: orange;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: var(--font-ff-red-hat-light);
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+/*make wrapper to change its width when the menubar clicked*/
+.wrapper-responsive {
+  grid-template-columns: 1fr;
+}
+
+header {
+  background-color: var(--text-color-light);
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  padding: 1.3rem 2rem;
+  grid-column: 2 / -1;
+  /*as flex container*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+/*header responsive*/
+.header-responsive {
+  grid-column: 1 / -1;
+}
+
+/* a div element which contain both the title and the navbar*/
+.left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 14rem;
+  /*as flex-conatainer*/
+  display: flex;
+  flex-direction: column;
+}
+
+/*make a navbar to change it's width when the menubar is clicked*/
+.navbar-responsive {
+  width: 0px;
+  overflow: hidden;
+}
+
+.title {
+  background-color: #36404e;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  font-family: var(--font-ff-red-hat-bold);
+}
+
+/* navbar*/
+.navbar {
+  flex-grow: 1;
+  background-color: var(--label-text-color);
+}
+
+.navbar__list {
+  list-style-type: none;
+}
+
+.navbar__list-text {
+  color: #98a6ad;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.navbar__list-item {
+  text-align: center;
+  font-family: var(--font-ff-red-hat-regular);
+}
+
+.navbar__list-item + .navbar__list-item {
+  margin-top: 0.5rem;
+}
+
+.navbar__list-item a {
+  display: block;
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  color: var(--orange);
+}
+
+.navbar__list-item a:hover {
+  background-color: #36404e;
+}
+
+main {
+  grid-column: 2;
+  grid-row: 2 / -2;
+}
+
+/*make the main element to change it's layout when the menubar is clicked*/
+.main-responsive {
+  grid-column: 1 / -1;
+}
+
+/*section title*/
+.section-title {
+  font-family: var(--font-ff-red-hat-regular);
+  border-bottom: 1px solid var(--input-border-color);
+  padding: 1rem 1.5rem;
+  font-size: 2.5rem;
+}
+
+/*add post*/
+.add-post {
+  padding: 1.2rem 1.5rem 1.2rem 3rem;
+}
+
+.add-post__title,
+.mangage-post__title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.post-form {
+  padding: 0 0 0 2rem;
+}
+
+/*form control*/
+.form-control {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/*it will target only the first two label elements which is found inside of the form control*/
+.form-control__label {
+  color: var(--label-text-color);
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 0.8rem;
+}
+
+input,
+select {
+  padding: 1rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+}
+
+/*select element for the post catagory*/
+select[name="post-catagory"] {
+  letter-spacing: 1px;
+}
+
+/*post detail*/
+.post-detail {
+  border: 1.5px solid var(--input-border-color);
+  border-radius: 5px;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-detail__title {
+  text-transform: capitalize;
+  color: var(--title-color-black);
+  font-family: var(--font-ff-red-hat-regular);
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+textarea[name="post-detail-text"] {
+  width: 100%;
+  resize: vertical;
+  padding: 1rem;
+}
+
+textarea[name="post-detail-text"]::placeholder,
+input {
+  color: var(--label-text-color);
+  letter-spacing: 1px;
+}
+
+/*adding image to the post*/
+.featured-image {
+  border: 1.5px solid var(--input-border-color);
+  border-radius: 5px;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.featured-image__title {
+  text-transform: capitalize;
+  color: var(--title-color-black);
+  font-family: var(--font-ff-red-hat-regular);
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+input[name="posted-image"] {
+  align-self: flex-start;
+  font-family: var(--font-ff-red-hat-regular);
+}
+
+button[type="submit"] {
+  background-color: var(--light-green);
+  border: none;
+  color: white;
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+}
+
+/*manage post */
+.manage-post {
+  padding: 2rem 1.5rem 1.2rem 3rem;
+}
+
+/*table element inside of the manage post*/
+.manage-post__table {
+  width: 100%;
+  max-width: 70rem;
+}
+
+.manage-post__table,
+td,
+th {
+  text-align: left;
+}
+
+/*manage post table header*/
+table.manage-post__table thead th {
+  background-color: #3b3e47;
+  color: white;
+  padding: 0.7rem;
+}
+
+/*manage post table body*/
+.manage-post__table tbody {
+  background: var(--title-color);
+}
+
+.manage-post__table td {
+  padding: 0.7rem;
+  color: var(--title-color-black);
+}
+
+.delete-text {
+  margin-left: 0.5rem;
+}
+
+/*schedule section*/
+.schedule-section {
+  margin-top: 3rem;
+}
+
+.schedule-section__title {
+  padding: 1.2rem 1.5rem 1.2rem 3rem;
+}
+
+.schedule-section__form {
+  padding: 0 1.5rem 0 5rem;
+}
+
+/*coach profile section*/
+.coach-profile__form {
+  padding: 2rem 1.5rem 0 5rem;
+}
+
+.coach-profile__title {
+  padding: 1.2rem 1.5rem 1.2rem 3rem;
+}
+
+/*a member of the club*/
+.container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.club-title {
+  padding: 0 0 0 4rem;
+}
+
+.search-item {
+  width: 100%;
+  max-width: 35rem;
+  margin-left: 2rem;
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--input-border-color);
+}
+
+.search-item__icon {
+  color: var(--color--black);
+}
+
+.search-item__input {
+  background: transparent;
+  margin-left: 2rem;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  width: 25rem;
+}
+
+.clicked {
+  border: 1px solid var(--title-color-black);
+}
+
+.edit-members-of-the-club {
+  padding: 2rem 1.5rem;
+}
+
+.list-of-members-of-the-club {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  list-style-type: none;
+  border-radius: 15px;
+  padding: 4rem 2rem;
+  background-color: var(--title-color);
+  width: 90%;
+  max-width: 35rem;
+  margin: 0 auto;
+  color: var(--title-color-black);
+}
+
+.crud-buttons {
+  position: absolute;
+  padding: 1rem 2rem;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  transition: transform 0.8s ease;
+}
+
+.card:hover .crud-buttons {
+  transform: translateY(0);
+  display: flex;
+  justify-content: space-between;
+  opacity: 1;
+}
+
+.card {
+  margin-top: 2rem;
+}
+
+.card-img {
+  display: block;
+  margin: 0 auto 2rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card .row + .row {
+  margin-top: 1.5rem;
+}
+
+.card .row > * {
+  margin-top: 3px;
+}
+
+.card__value {
+  text-decoration: underline;
+  text-decoration-color: var(--title-color-black);
+}
+
+footer {
+  text-align: center;
+  grid-column: 2;
+  grid-row: -2 / -1;
+}
+
+/*make a footer to change it's layout when the menubar is clicked*/
+.footer-responsive {
+  grid-column: 1 / -1;
+}
+
+/*media query*/
+@media (min-width: 700px) {
+  /*coaches*/
+  .card {
+    margin: 1.5rem 2rem;
+  }
+}
+
+/*utility class*/
+.margin-top-1 {
+  margin-top: 3rem;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 2rem;
+}
+
+.border-top-1 {
+  border-top: 1px solid var(--input-border-color);
+}
+
+.padding-top-1 {
+  padding-top: 1rem;
+}

@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin Page</title>
+    <!--css-->
+    <link rel="stylesheet" href="admin.css" />
+
+    <!--font awesome Icon-->
+    <script src="./font-awesome-icon/all.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--header-->
+      <header>
+        <!--menu bar-->
+        <span class="menubar">
+          <i class="fas fa-bars"></i>
+        </span>
+
+        <!--profile-->
+        <img src="./image/wollo logo.jpg" alt="logo" class="logo" />
+      </header>
+
+      <!--a div element which contain the tilte and navbar-->
+      <div class="left">
+        <h1 class="title">Admin</h1>
+
+        <!--navigation-->
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <p class="navbar__list-text">NAVIGATION</p>
+
+            <li class="navbar__list-item">
+              <a href="#news-post"> post </a>
+            </li>
+
+            <!--
+            <li class="navbar__list-item">
+              <a href="#"> page </a>
+            </li> -->
+
+            <li class="navbar__list-item">
+              <a href="#schedule-section"> schedule </a>
+            </li>
+
+            <li class="navbar__list-item">
+              <a href="#coach-profile-section"> Add coach profile</a>
+            </li>
+
+            <li id="" class="navbar__list-item">
+              <a href="#club-members-section"> members </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!--main element-->
+      <main>
+        <!--post section-->
+        <section class="post" id="news-post">
+          <h2 class="section-title">post</h2>
+
+          <!--add post-->
+          <div class="add-post">
+            <h3 class="add-post__title">add post</h3>
+
+            <form action="#" class="post-form">
+              <!--post section-->
+              <div class="form-control">
+                <!-- Add post title-->
+                <label class="form-control__label" for="post-title"
+                  >post title</label
+                >
+
+                <input
+                  type="text"
+                  name="post title"
+                  id="post-title"
+                  placeholder="Enter title"
+                />
+              </div>
+
+              <!--add catagory section-->
+              <div class="form-control">
+                <!--catagory-->
+                <label class="form-control__label" for="catagory">
+                  catagory
+                </label>
+
+                <!--select catagory for the post-->
+                <select name="post-catagory" id="catagory">
+                  <option value="athletics">athletics</option>
+
+                  <option value="football">football</option>
+
+                  <option value="gym">gym</option>
+                </select>
+              </div>
+
+              <!--add post detail-->
+              <div class="form-control post-detail">
+                <h4 class="post-detail__title">post details</h4>
+
+                <textarea
+                  name="post-detail-text"
+                  id="post-detail-text"
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter post detail"
+                ></textarea>
+              </div>
+
+              <!--featured image-->
+              <div class="form-control featured-image">
+                <h4 class="featured-image__title">Feature Image</h4>
+
+                <input
+                  type="file"
+                  name="posted-image"
+                  id="post-image"
+                  placeholder="choose file"
+                />
+              </div>
+
+              <!--save and post button-->
+              <button type="submit">Save and Post</button>
+            </form>
+          </div>
+
+          <!--manging post after we have posted it-->
+          <div class="manage-post">
+            <h3 class="mangage-post__title">manage post</h3>
+
+            <div class="manage-post__container">
+              <table class="manage-post__table">
+                <thead>
+                  <tr>
+                    <th>title</th>
+                    <th>category</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <b>new bar is coming</b>
+                    </td>
+
+                    <td>gym</td>
+
+                    <td>
+                      <span class="edit-text edit-post--manage-post">
+                        <i class="fas fa-pencil-alt"></i>
+                      </span>
+
+                      <span class="delete-text delete-post--manage-post">
+                        <i class="fas fa-trash"></i>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!--schedule section-->
+        <section class="schedule-section" id="schedule-section">
+          <h2 class="section-title">schedule</h2>
+
+          <!--add a game schedule -->
+          <h3 class="schedule-section__title">Add a game schedule</h3>
+
+          <!--submitting a a game schedule to a form-->
+          <form action="#" class="schedule-section__form">
+            <div class="form-control">
+              <!--game-->
+              <label for="game" class="form-control__label"> game</label>
+
+              <input
+                type="text"
+                id="game"
+                name="game"
+                placeholder="Add a game"
+              />
+            </div>
+
+            <div class="form-control">
+              <!--game place-->
+              <label for="game-place" class="form-control__label">place</label>
+
+              <input
+                type="text"
+                id="game-place"
+                id="game-place"
+                name="game-place"
+                placeholder="Add a game place"
+              />
+            </div>
+
+            <div class="form-control">
+              <!--game time-->
+              <label class="form-control__label" for="game-time">time</label>
+
+              <input
+                type="text"
+                name="game-time"
+                id="game-time"
+                placeholder="Add a game time"
+              />
+            </div>
+
+            <button type="submit">save and post</button>
+          </form>
+
+          <!--add schedule of event-->
+          <h3 class="schedule-section__title margin-top-1">
+            Add a event schedule
+          </h3>
+
+          <!--submitting an event schedule to a form-->
+          <form action="#" class="schedule-section__form">
+            <div class="form-control">
+              <!--event-->
+              <label for="event" class="form-control__label"> event</label>
+
+              <input
+                type="text"
+                id="event"
+                name="event"
+                placeholder="Add an event"
+              />
+            </div>
+
+            <div class="form-control">
+              <!--game place-->
+              <label for="event-place" class="form-control__label">place</label>
+
+              <input
+                type="text"
+                id="event-place"
+                name="event-place"
+                placeholder="Add an event place"
+              />
+            </div>
+
+            <div class="form-control">
+              <!--game time-->
+              <label class="form-control__label" for="event-time">time</label>
+
+              <input
+                type="text"
+                name="event-time"
+                id="event-time"
+                placeholder="Add an event time"
+              />
+            </div>
+
+            <button type="submit">save and post</button>
+          </form>
+        </section>
+
+        <!--coach profile section-->
+        <section id="coach-profile-section" class="coach-profile margin-top-1">
+          <h2 class="section-title">coach profile</h2>
+
+          <h3 class="coach-profile__title">Add a coach profile</h3>
+
+          <form action="#" class="coach-profile__form">
+            <div class="form-control">
+              <!--coach name-->
+              <label for="coach-name" class="form-control__label"> name</label>
+
+              <input
+                type="text"
+                id="coach-name"
+                name="coach-name"
+                placeholder="Add a name of a coach"
+              />
+            </div>
+
+            <div class="form-control">
+              <!--coach username-->
+              <label for="username" class="form-control__label">
+                username</label
+              >
+
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Add a username"
+              />
+            </div>
+
+            <div class="form-control">
+              <!--coach image-->
+              <label class="form-control__label" for="image"
+                >image of the coach</label
+              >
+
+              <input
+                type="file"
+                placeholder="Enter your coach image"
+                id="coach-image"
+              />
+            </div>
+
+            <div class="form-control display-flex">
+              <label class="form-control__label" for="club">Club</label>
+
+              <select name="club" class="style-for-input" id="club">
+                <option value="choose-club">choose club</option>
+
+                <option value="athletics">athletics</option>
+
+                <option value="athletics">football</option>
+
+                <option value="athletics">gym</option>
+              </select>
+            </div>
+
+            <div class="form-control">
+              <!--coach password-->
+              <label for="coach-password" class="form-control__label">
+                password</label
+              >
+
+              <input
+                type="text"
+                id="coach-password"
+                name="coach-password"
+                placeholder="Add a password"
+              />
+            </div>
+
+            <div class="form-control">
+              <!--coach position-->
+              <label for="coach-field" class="form-control__label"
+                >field of the coach</label
+              >
+
+              <input
+                type="text"
+                id="coach-field"
+                name="coach-field"
+                placeholder="Add a field of the coach"
+              />
+            </div>
+
+            <div class="form-control">
+              <!--year of experience-->
+              <label class="form-control__label" for="year-of-experience"
+                >year-of-experience</label
+              >
+
+              <input
+                type="text"
+                name="year-of-experience"
+                id="year-of-experience"
+                placeholder="Add a year of experience"
+              />
+            </div>
+
+            <div class="form-control">
+              <!--Accomplishment-->
+              <label class="form-control__label" for="accomplishment"
+                >accomplishment</label
+              >
+
+              <input
+                type="text"
+                name="accomplishment"
+                id="accomplishment"
+                placeholder="Add an accomplishment"
+              />
+            </div>
+
+            <div class="form-control">
+              <!--Quote-->
+              <label class="form-control__label" for="quote">Quote</label>
+
+              <input
+                type="text"
+                name="quote"
+                id="quote"
+                placeholder="Add a quote"
+              />
+            </div>
+
+            <button type="submit">save and post</button>
+          </form>
+
+          <div class="container border-top-1 margin-top-1 padding-top-1">
+            <!--registered coaches-->
+            <h3 class="coach-profile__title">Registered coaches</h3>
+
+            <div class="search-item">
+              <label class="search-item__icon" for="search-input-athletics">
+                <i class="fas fa-search"></i>
+              </label>
+
+              <input
+                type="search"
+                name="search-for-the-member"
+                class="search-item__input"
+                id="search-input-athletics"
+                placeholder="search member by username"
+              />
+            </div>
+          </div>
+
+          <!--list of members of the coaches-->
+          <ul class="list-of-members-of-the-club">
+            <!--card-1-->
+            <li class="card">
+              <!--crud buttons-->
+              <div class="crud-buttons">
+                <span class="edit-text edit-coach-info">
+                  <i class="fas fa-pencil-alt"></i>
+                </span>
+
+                <span class="delete-text delete-coach-info">
+                  <i class="fas fa-trash"></i>
+                </span>
+              </div>
+
+              <!--card image-->
+              <img
+                style="width: 100px; height: 100px"
+                src="./image/wollo logo.jpg"
+                alt="image of the coach"
+                class="card-img"
+              />
+
+              <!--row 1-->
+              <div class="row">
+                <p class="card__key">Name:</p>
+                <p class="card__value">Gethun negash</p>
+              </div>
+
+              <!--row 2-->
+              <div class="row">
+                <p class="card__key">field:</p>
+
+                <p class="card__value">head coach</p>
+              </div>
+
+              <!--row 3-->
+              <div class="row">
+                <p class="card__key">username:</p>
+
+                <p class="card__value">aemro11</p>
+              </div>
+
+              <!--row 4-->
+              <div class="row">
+                <p class="card__key">email:</p>
+
+                <p class="card__value">aemrobekalu083@gmail.com</p>
+              </div>
+
+              <!--row 5-->
+              <div class="row">
+                <p class="card__key">password:</p>
+
+                <p class="card__value">1234567</p>
+              </div>
+
+              <!--row 6-->
+              <div class="row">
+                <p class="card__key">Year of experience:</p>
+
+                <p class="card__value">3 year</p>
+              </div>
+
+              <!--row 7-->
+              <div class="row">
+                <p class="card__key">Accomplishment:</p>
+
+                <p class="card__value">1 time champion</p>
+              </div>
+
+              <!--row 8-->
+              <div class="row">
+                <p class="card__key">Quote:</p>
+
+                <p class="card__value">"No pain No gain"</p>
+              </div>
+
+              <!--row 9-->
+              <div class="row">
+                <p class="card__key">club:</p>
+
+                <p class="card__value">athletics</p>
+              </div>
+            </li>
+            <!--card-1-->
+            <li class="card">
+              <!--crud buttons-->
+              <div class="crud-buttons">
+                <span class="edit-text edit-coach-info">
+                  <i class="fas fa-pencil-alt"></i>
+                </span>
+
+                <span class="delete-text delete-coach-info">
+                  <i class="fas fa-trash"></i>
+                </span>
+              </div>
+
+              <!--card image-->
+              <img
+                style="width: 100px; height: 100px"
+                src="./image/wollo logo.jpg"
+                alt="image of the coach"
+                class="card-img"
+              />
+
+              <!--row 1-->
+              <div class="row">
+                <p class="card__key">Name:</p>
+                <p class="card__value">Gethun negash</p>
+              </div>
+
+              <!--row 2-->
+              <div class="row">
+                <p class="card__key">field:</p>
+
+                <p class="card__value">head coach</p>
+              </div>
+
+              <!--row 3-->
+              <div class="row">
+                <p class="card__key">username:</p>
+
+                <p class="card__value">aemro11</p>
+              </div>
+
+              <!--row 4-->
+              <div class="row">
+                <p class="card__key">email:</p>
+
+                <p class="card__value">aemrobekalu083@gmail.com</p>
+              </div>
+
+              <!--row 5-->
+              <div class="row">
+                <p class="card__key">password:</p>
+
+                <p class="card__value">1234567</p>
+              </div>
+
+              <!--row 6-->
+              <div class="row">
+                <p class="card__key">Year of experience:</p>
+
+                <p class="card__value">3 year</p>
+              </div>
+
+              <!--row 7-->
+              <div class="row">
+                <p class="card__key">Accomplishment:</p>
+
+                <p class="card__value">1 time champion</p>
+              </div>
+
+              <!--row 8-->
+              <div class="row">
+                <p class="card__key">Quote:</p>
+
+                <p class="card__value">"No pain No gain"</p>
+              </div>
+
+              <!--row 9-->
+              <div class="row">
+                <p class="card__key">club:</p>
+
+                <p class="card__value">athletics</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!--club members section-->
+        <section
+          id="club-members-section"
+          class="club-members-section margin-top-1"
+        >
+          <h2 class="section-title">club members</h2>
+
+          <!--athletics club-->
+          <div class="athletics-club padding-top-1">
+            <div class="container">
+              <h3 class="club-title">Athletics club</h3>
+
+              <div class="search-item">
+                <label class="search-item__icon" for="search-input-athletics">
+                  <i class="fas fa-search"></i>
+                </label>
+
+                <input
+                  type="search"
+                  name="search-for-the-member"
+                  class="search-item__input"
+                  id="search-input-athletics"
+                  placeholder="search member by ID"
+                />
+              </div>
+            </div>
+
+            <!--list of members of the athletics club-->
+            <ul class="list-of-members-of-the-club">
+              <!--card-1-->
+              <li class="card">
+                <!--crud buttons-->
+                <div class="crud-buttons">
+                  <span class="edit-text edit-athletics-information">
+                    <i class="fas fa-pencil-alt"></i>
+                  </span>
+
+                  <span class="delete-text delete-athletics-information">
+                    <i class="fas fa-trash"></i>
+                  </span>
+                </div>
+
+                <!--card image-->
+                <img
+                  style="width: 100px; height: 100px'"
+                  src="./image/wollo logo.jpg"
+                  alt="image of the coach"
+                  class="card-img"
+                />
+
+                <!--row 1-->
+                <div class="row">
+                  <p class="card__key">Name:</p>
+                  <p class="card__value">Gethun negash</p>
+                </div>
+
+                <!--row 2-->
+                <div class="row">
+                  <p class="card__key">Age:</p>
+
+                  <p class="card__value">20</p>
+                </div>
+
+                <!--row 3-->
+                <div class="row">
+                  <p class="card__key">Id:</p>
+
+                  <p class="card__value">WOUR/4110/12</p>
+                </div>
+
+                <!--row 4-->
+                <div class="row">
+                  <p class="card__key">Phone number:</p>
+
+                  <p class="card__value">0988289263</p>
+                </div>
+
+                <!--row 5-->
+                <div class="row">
+                  <p class="card__key">username:</p>
+
+                  <p class="card__value">aemro11</p>
+                </div>
+
+                <!--row 6-->
+                <div class="row">
+                  <p class="card__key">email:</p>
+
+                  <p class="card__value">aemrobekalu083@gmail.com</p>
+                </div>
+
+                <!--row 7-->
+                <div class="row">
+                  <p class="card__key">club:</p>
+
+                  <p class="card__value">athletics</p>
+                </div>
+
+                <!--row 8-->
+                <div class="row">
+                  <p class="card__key">password:</p>
+
+                  <p class="card__value">1234567</p>
+                </div>
+              </li>
+
+              <!--card-2 -->
+              <li class="card">
+                <!--crud buttons-->
+                <div class="crud-buttons">
+                  <span class="edit-text edit-athletics-information">
+                    <i class="fas fa-pencil-alt"></i>
+                  </span>
+
+                  <span class="delete-text delete-athletics-information">
+                    <i class="fas fa-trash"></i>
+                  </span>
+                </div>
+
+                <!--card image-->
+                <img
+                  style="width: 100px; height: 100px"
+                  src="./image/wollo logo.jpg"
+                  alt="image of the coach"
+                  class="card-img"
+                />
+
+                <!--row 1-->
+                <div class="row">
+                  <p class="card__key">Name:</p>
+                  <p class="card__value">Gethun negash</p>
+                </div>
+
+                <!--row 2-->
+                <div class="row">
+                  <p class="card__key">Age:</p>
+
+                  <p class="card__value">20</p>
+                </div>
+
+                <!--row 3-->
+                <div class="row">
+                  <p class="card__key">Id:</p>
+
+                  <p class="card__value">WOUR/4110/12</p>
+                </div>
+
+                <!--row 4-->
+                <div class="row">
+                  <p class="card__key">Phone number:</p>
+
+                  <p class="card__value">0988289263</p>
+                </div>
+
+                <!--row 5-->
+                <div class="row">
+                  <p class="card__key">username:</p>
+
+                  <p class="card__value">aemro11</p>
+                </div>
+
+                <!--row 6-->
+                <div class="row">
+                  <p class="card__key">email:</p>
+
+                  <p class="card__value">aemrobekalu083@gmail.com</p>
+                </div>
+
+                <!--row 6-->
+                <div class="row">
+                  <p class="card__key">club:</p>
+
+                  <p class="card__value">athletics</p>
+                </div>
+
+                <!--row 7-->
+                <div class="row">
+                  <p class="card__key">password:</p>
+
+                  <p class="card__value">1234567</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!--football club-->
+          <div class="football-club border-top-1 padding-top-1">
+            <div class="container">
+              <h3 class="club-title">football club</h3>
+
+              <div class="search-item">
+                <label class="search-item__icon" for="search-input-athletics">
+                  <i class="fas fa-search"></i>
+                </label>
+
+                <input
+                  type="search"
+                  name="search-for-the-member"
+                  class="search-item__input"
+                  id="search-input-athletics"
+                  placeholder="search member by ID"
+                />
+              </div>
+            </div>
+
+            <!--list of members of the athletics club-->
+            <ul class="list-of-members-of-the-club">
+              <!--card-1-->
+              <li class="card">
+                <!--crud buttons-->
+                <div class="crud-buttons">
+                  <span class="edit-text edit-football-club">
+                    <i class="fas fa-pencil-alt"></i>
+                  </span>
+
+                  <span class="delete-text delete-football-club">
+                    <i class="fas fa-trash"></i>
+                  </span>
+                </div>
+
+                <!--card image-->
+                <img
+                  style="width: 100px; height: 100px'"
+                  src="./image/wollo logo.jpg"
+                  alt="image of the coach"
+                  class="card-img"
+                />
+
+                <!--row 1-->
+                <div class="row">
+                  <p class="card__key">Name:</p>
+                  <p class="card__value">Gethun negash</p>
+                </div>
+
+                <!--row 2-->
+                <div class="row">
+                  <p class="card__key">Age:</p>
+
+                  <p class="card__value">20</p>
+                </div>
+
+                <!--row 3-->
+                <div class="row">
+                  <p class="card__key">Id:</p>
+
+                  <p class="card__value">WOUR/4110/12</p>
+                </div>
+
+                <!--row 4-->
+                <div class="row">
+                  <p class="card__key">Phone number:</p>
+
+                  <p class="card__value">0988289263</p>
+                </div>
+
+                <!--row 5-->
+                <div class="row">
+                  <p class="card__key">username:</p>
+
+                  <p class="card__value">aemro11</p>
+                </div>
+
+                <!--row 6-->
+                <div class="row">
+                  <p class="card__key">email:</p>
+
+                  <p class="card__value">aemrobekalu083@gmail.com</p>
+                </div>
+
+                <!--row 6-->
+                <div class="row">
+                  <p class="card__key">club:</p>
+
+                  <p class="card__value">football</p>
+                </div>
+
+                <!--row 7-->
+                <div class="row">
+                  <p class="card__key">password:</p>
+
+                  <p class="card__value">1234567</p>
+                </div>
+              </li>
+
+              <!--card-2 -->
+              <li class="card">
+                <!--crud buttons-->
+                <div class="crud-buttons">
+                  <span class="edit-text edit-football-club">
+                    <i class="fas fa-pencil-alt"></i>
+                  </span>
+
+                  <span class="delete-text delete-football-club">
+                    <i class="fas fa-trash"></i>
+                  </span>
+                </div>
+
+                <!--card image-->
+                <img
+                  style="width: 100px; height: 100px"
+                  src="./image/wollo logo.jpg"
+                  alt="image of the coach"
+                  class="card-img"
+                />
+
+                <!--row 1-->
+                <div class="row">
+                  <p class="card__key">Name:</p>
+                  <p class="card__value">Gethun negash</p>
+                </div>
+
+                <!--row 2-->
+                <div class="row">
+                  <p class="card__key">Age:</p>
+
+                  <p class="card__value">20</p>
+                </div>
+
+                <!--row 3-->
+                <div class="row">
+                  <p class="card__key">Id:</p>
+
+                  <p class="card__value">WOUR/4110/12</p>
+                </div>
+
+                <!--row 4-->
+                <div class="row">
+                  <p class="card__key">Phone number:</p>
+
+                  <p class="card__value">0988289263</p>
+                </div>
+
+                <!--row 5-->
+                <div class="row">
+                  <p class="card__key">username:</p>
+
+                  <p class="card__value">aemro11</p>
+                </div>
+
+                <!--row 6-->
+                <div class="row">
+                  <p class="card__key">email:</p>
+
+                  <p class="card__value">aemrobekalu083@gmail.com</p>
+                </div>
+
+                <!--row 7-->
+                <div class="row">
+                  <p class="card__key">club:</p>
+
+                  <p class="card__value">football</p>
+                </div>
+
+                <!--row 7-->
+                <div class="row">
+                  <p class="card__key">password:</p>
+
+                  <p class="card__value">1234567</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!--gym club-->
+          <div class="gym-club border-top-1 padding-top-1">
+            <div class="container">
+              <h3 class="club-title">gym club</h3>
+
+              <div class="search-item">
+                <label class="search-item__icon" for="search-input-athletics">
+                  <i class="fas fa-search"></i>
+                </label>
+
+                <input
+                  type="search"
+                  name="search-for-the-member"
+                  class="search-item__input"
+                  id="search-input-athletics"
+                  placeholder="search member by ID"
+                />
+              </div>
+            </div>
+
+            <!--list of members of the athletics club-->
+            <ul class="list-of-members-of-the-club">
+              <!--card-1-->
+              <li class="card">
+                <!--crud buttons-->
+                <div class="crud-buttons">
+                  <span class="edit-text edit-gym-club">
+                    <i class="fas fa-pencil-alt"></i>
+                  </span>
+
+                  <span class="delete-text delete-gym-club">
+                    <i class="fas fa-trash"></i>
+                  </span>
+                </div>
+
+                <!--card image-->
+                <img
+                  style="width: 100px; height: 100px'"
+                  src="./image/wollo logo.jpg"
+                  alt="image of the coach"
+                  class="card-img"
+                />
+
+                <!--row 1-->
+                <div class="row">
+                  <p class="card__key">Name:</p>
+                  <p class="card__value">Gethun negash</p>
+                </div>
+
+                <!--row 2-->
+                <div class="row">
+                  <p class="card__key">Age:</p>
+
+                  <p class="card__value">20</p>
+                </div>
+
+                <!--row 3-->
+                <div class="row">
+                  <p class="card__key">Id:</p>
+
+                  <p class="card__value">WOUR/4110/12</p>
+                </div>
+
+                <!--row 4-->
+                <div class="row">
+                  <p class="card__key">Phone number:</p>
+
+                  <p class="card__value">0988289263</p>
+                </div>
+
+                <!--row 5-->
+                <div class="row">
+                  <p class="card__key">username:</p>
+
+                  <p class="card__value">aemro11</p>
+                </div>
+
+                <!--row 6-->
+                <div class="row">
+                  <p class="card__key">email:</p>
+
+                  <p class="card__value">aemrobekalu083@gmail.com</p>
+                </div>
+
+                <!--row 7-->
+                <div class="row">
+                  <p class="card__key">club:</p>
+
+                  <p class="card__value">gym</p>
+                </div>
+
+                <!--row 8-->
+                <div class="row">
+                  <p class="card__key">password:</p>
+
+                  <p class="card__value">1234567</p>
+                </div>
+              </li>
+
+              <!--card-2 -->
+              <li class="card">
+                <!--crud buttons-->
+                <div class="crud-buttons">
+                  <span class="edit-text edit-gym-club">
+                    <i class="fas fa-pencil-alt"></i>
+                  </span>
+
+                  <span class="delete-text delete-gym-club">
+                    <i class="fas fa-trash"></i>
+                  </span>
+                </div>
+
+                <!--card image-->
+                <img
+                  style="width: 100px; height: 100px"
+                  src="./image/wollo logo.jpg"
+                  alt="image of the coach"
+                  class="card-img"
+                />
+
+                <!--row 1-->
+                <div class="row">
+                  <p class="card__key">Name:</p>
+                  <p class="card__value">Gethun negash</p>
+                </div>
+
+                <!--row 2-->
+                <div class="row">
+                  <p class="card__key">Age:</p>
+
+                  <p class="card__value">20</p>
+                </div>
+
+                <!--row 3-->
+                <div class="row">
+                  <p class="card__key">Id:</p>
+
+                  <p class="card__value">WOUR/4110/12</p>
+                </div>
+
+                <!--row 4-->
+                <div class="row">
+                  <p class="card__key">Phone number:</p>
+
+                  <p class="card__value">0988289263</p>
+                </div>
+
+                <!--row 5-->
+                <div class="row">
+                  <p class="card__key">username:</p>
+
+                  <p class="card__value">aemro11</p>
+                </div>
+
+                <!--row 6-->
+                <div class="row">
+                  <p class="card__key">email:</p>
+
+                  <p class="card__value">aemrobekalu083@gmail.com</p>
+                </div>
+
+                <!--row 7-->
+                <div class="row">
+                  <p class="card__key">club:</p>
+
+                  <p class="card__value">gym</p>
+                </div>
+
+                <!--row 7-->
+                <div class="row">
+                  <p class="card__key">password:</p>
+
+                  <p class="card__value">1234567</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <!--footer-->
+      <footer>
+        <p>&copy; developed by wollo Kombolcha software department</p>
+      </footer>
+    </div>
+
+    <!--javascript file-->
+    <script src="admin.js"></script>
+  </body>
+</html>

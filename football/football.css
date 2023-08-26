@@ -1,0 +1,466 @@
+@import url(../base.css);
+
+body {
+  color: var(--title-color);
+}
+
+.main-title {
+  color: var(--title-color);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  padding: 2.6rem 2rem;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.main-title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: var(--title-color);
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 62%;
+  max-width: 23rem;
+  margin: 1rem auto;
+}
+
+.main-title--light {
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+.container {
+  background: url("./assets/background-mb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 19.3rem;
+  padding: 2.5rem 0;
+}
+
+.main-text {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 2.4rem;
+  padding: 0.6rem 3rem 1.3rem;
+  margin: 0 auto 1rem;
+  max-width: 44.4rem;
+}
+
+.join-btn {
+  display: block;
+  border: none;
+  border-radius: 8px;
+  background: var(--first-color);
+  color: var(--title-color-black);
+  padding: 1rem 2rem;
+  margin: 1.5rem auto 0;
+  width: 46%;
+  max-width: 16.4rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.membership {
+  margin-top: 1.5rem;
+}
+
+.membership-title {
+  text-align: center;
+  color: var(--first-color);
+  padding: 2.3rem 1rem;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.membership-img {
+  display: block;
+  margin: 0 auto 5rem;
+}
+
+.membership-subtitle {
+  color: var(--title-color);
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
+  margin: 4rem auto 2.1rem;
+}
+
+.membership-text {
+  font-family: var(--font-ff-red-hat-light);
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2;
+  width: 83.5%;
+  max-width: 78.6rem;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.membership-btn {
+  display: block;
+  border: none;
+  border-radius: 16px;
+  padding: 1.85rem 0.8rem;
+  font-size: 1.8rem;
+  background-color: var(--first-color);
+  color: var(--title-color-black);
+  margin: 0 auto;
+  max-width: 30rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+/*history section*/
+.history {
+  margin-top: 7.85rem;
+}
+
+.section-title {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.history-text {
+  margin: 2.5rem auto 0;
+  text-align: center;
+  max-width: 99rem;
+  font-size: 1.8rem;
+  font-family: var(--font-ff-red-hat-light);
+  padding: 1rem 0.8rem;
+  line-height: 1.8;
+}
+
+.section-img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-height: 50rem;
+  max-width: 76rem;
+}
+
+/*accomplishment*/
+.accomplishment {
+  margin-top: 5rem;
+}
+
+.accomplishment__text {
+  margin: 2.5rem auto 0;
+  text-align: center;
+  max-width: 99rem;
+  padding: 1rem 0.8rem;
+  line-height: 1.8;
+  font-size: 1.8rem;
+  font-family: var(--font-ff-red-hat-light);
+}
+
+/*coaches-section*/
+.coaches {
+  margin-top: 5rem;
+}
+
+.list-of-coaches-and-staff {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 15px;
+  padding: 4rem 2rem;
+  background-color: var(--title-color);
+  width: 90%;
+  max-width: 35rem;
+  margin: 0 auto;
+  color: var(--title-color-black);
+}
+
+.card {
+  margin-top: 2rem;
+}
+
+.card-img {
+  display: block;
+  margin: 0 auto 2rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card .row + .row {
+  margin-top: 1.5rem;
+}
+
+.card .row > * {
+  margin-top: 3px;
+}
+
+.card__value {
+  text-decoration: underline;
+  text-decoration-color: var(--title-color-black);
+}
+
+/*training facility*/
+.training-facility {
+  margin-top: 5rem;
+}
+
+.training-facility > div {
+  margin-top: 5rem;
+}
+
+.training-facility__description {
+  margin: 2rem auto 0;
+  max-width: 99rem;
+  line-height: 1.8;
+  padding: 0.8rem 0.8rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: var(--font-ff-red-hat-light);
+}
+
+/*acadamey section*/
+.acadamey-program {
+  margin-top: 5rem;
+}
+
+.acadamey-program__text {
+  font-size: 1.8rem;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 99rem;
+  font-family: var(--font-ff-red-hat-light);
+  padding: 0.2rem 0.8rem;
+}
+
+/*schedule*/
+.schedule {
+  margin-top: 5rem;
+}
+
+.list-of-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.schedule .action {
+  padding: 0 1rem;
+  width: 90%;
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+.schedule .action + .action {
+  margin-top: 2rem;
+}
+
+.schedule .action .row {
+  border: 1px solid var(--title-color);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.schedule .action .row > * {
+  margin: 0.5rem;
+}
+
+.footer-text {
+  color: var(--title-color);
+}
+
+/*media queries*/
+/*#### 700px ####*/
+@media (min-width: 700px) {
+  .container {
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-text {
+    font-size: 3rem;
+  }
+
+  .join-btn {
+    font-size: 2rem;
+    padding: 1.5rem 2.5rem;
+  }
+
+  /*membership*/
+  .membership-btn {
+    padding: 1.85rem 3rem;
+  }
+
+  /*coaches*/
+  .card {
+    margin: 1.5rem 2rem;
+  }
+
+  /*schedule*/
+  .schedule .action {
+    margin: 1rem !important;
+  }
+}
+
+/*#### desktop view (1440px) ####*/
+@media (min-width: 1440px) {
+  .container {
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60.7rem;
+  }
+
+  .main-text {
+    font-size: 3.4rem;
+    width: 50%;
+    max-width: 72rem;
+    line-height: 1.8;
+  }
+
+  /*membership*/
+  .membership {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .membership-title {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+
+  .membership__description {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .section-img {
+    max-height: unset;
+    max-width: unset;
+    margin: 0;
+    height: 100%;
+    width: 563px;
+  }
+
+  .membership-img {
+    grid-row: 1 / 3;
+    height: 100%;
+  }
+
+  .membership-btn {
+    padding: 1.85rem 5rem;
+  }
+
+  .section {
+    padding: 3.1rem 10rem 14.6rem 5.8rem;
+  }
+
+  /*history*/
+  .history {
+    margin-top: 7.85rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    grid-gap: 0 19.9rem;
+  }
+
+  .section-title {
+    margin-bottom: 6rem;
+  }
+
+  .history-title {
+    grid-column: 1 / -1;
+  }
+
+  .history-img {
+    grid-column: 1 / 2;
+    grid-row: 2/ 3;
+    height: 100%;
+    width: 563px;
+    margin: 0;
+  }
+
+  .history-text {
+    width: 62rem;
+    margin: 2.5rem 0 0;
+  }
+
+  /*accomplishment*/
+  .accomplishment {
+    margin-top: 0;
+  }
+
+  .acadamey-program .section-title {
+    margin-bottom: 3rem;
+  }
+
+  .accomplishment__text {
+    width: 62rem;
+  }
+
+  .accomplishment__img {
+    width: 56.3rem;
+    order: 1;
+  }
+
+  /*training facilites*/
+  .training-facility > div + div {
+    margin-top: 15rem;
+  }
+
+  .training-facility-img--right {
+    order: 1;
+  }
+
+  /*schedule*/
+  .schedule {
+    margin-top: 7rem;
+  }
+
+  .schedule .section-title {
+    margin-bottom: 3rem;
+  }
+}
+
+/*utility class*/
+.first-color {
+  color: var(--first-color);
+}
+
+.margin-right {
+  margin-right: 0.5rem;
+}
+
+.margin-left {
+  margin-left: 0.5rem;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 2rem;
+}
+
+.align-self-center {
+  align-self: center;
+}

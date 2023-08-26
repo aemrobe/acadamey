@@ -1,0 +1,61 @@
+@import url(../base.css);
+
+.contact-uss {
+  margin-top: 8rem;
+  background: url(./images/contact_g.jpg);
+  padding: 10rem 2rem;
+}
+
+.contact-us__title {
+  margin: 0 auto 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2;
+  font-family: var(--font--ff-semibold);
+  border-bottom: 1.5px solid var(--title-color);
+  color: var(--title-color);
+  max-width: 26rem;
+}
+
+.form {
+  max-width: 46rem;
+  margin: 0 auto;
+  border: 2px solid var(--title-color);
+  padding: 4rem 3rem 8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form .input {
+  border: 2px solid var(--title-color);
+  padding: 1.3rem;
+  background: transparent;
+}
+
+.input + .input {
+  margin-top: 2rem;
+}
+
+.input::placeholder {
+  color: var(--title-color);
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.message {
+  display: inline-block;
+  padding: 4rem 1rem !important;
+}
+
+.submit {
+  border: 2px solid var(--title-color);
+  background-color: var(--first-color);
+  color: var(--color-white);
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 8rem auto 0;
+  padding: 2rem;
+  width: 57%;
+  max-width: 22.6rem;
+  border-radius: 5rem;
+}

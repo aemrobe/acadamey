@@ -1,0 +1,71 @@
+@import url(../base.css);
+
+/*main*/
+.main {
+  margin-top: 4rem;
+  padding: 10rem 2rem 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main-title {
+  color: var(--title-color);
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  margin-bottom: 5rem;
+}
+
+.main-text {
+  max-width: 42.8rem;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--title-color);
+}
+
+.main-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--first-color);
+  color: var(--color-white);
+  padding: 1rem 4rem;
+  margin-bottom: 6rem;
+  font-size: 1.7rem;
+}
+
+.main-img {
+  max-width: 600px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.newsletter {
+  color: var(--title-color);
+}
+
+@media (min-width: 800px) {
+  .main {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1110px) {
+  .main {
+    margin: 4rem auto 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-img {
+    margin-left: 5rem;
+  }
+
+  .main-text {
+    font-size: 2rem;
+  }
+
+  .main-text {
+    max-width: 55.8rem;
+  }
+}
